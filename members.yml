@@ -1,0 +1,162 @@
+members:
+  kingshan:
+    name: "King Shan"
+    gender: "M"
+    gen: 0
+    parents: []
+
+  queenanga:
+    name: "Queen Anga"
+    gender: "F"
+    gen: 0
+    parents: []
+
+  ish:
+    name: "Ish"
+    gender: "M"
+    gen: 1
+    parents: [ "King Shan", "Queen Anga" ]
+
+  chit:
+    name: "Chit"
+    gender: "M"
+    gen: 1
+    parents: [ "King Shan", "Queen Anga" ]
+
+  ambi:
+    name: "Ambi"
+    gender: "F"
+    gen: 1
+    parents: [ "Chit" ]
+
+  vich:
+    name: "Vich"
+    gender: "M"
+    gen: 1
+    parents: [ "King Shan", "Queen Anga" ]
+
+  lika:
+    name: "Lika"
+    gender: "F"
+    gen: 1
+    parents: [ "Vich" ]
+
+  satya:
+    name: "Satya"
+    gender: "F"
+    gen: 1
+    parents: [ "King Shan", "Queen Anga" ]
+
+  vyan:
+    name: "Vyan"
+    gender: "M"
+    gen: 1
+    parents: [ "satya" ]
+
+  drita:
+    name: "Drita"
+    gender: "M"
+    gen: 2
+    parents: [ "Chit", "Ambi" ]
+
+  jaya:
+    name: "Jaya"
+    gender: "F"
+    gen: 2
+    parents: [ "Drita" ]
+
+  vrita:
+    name: "Vrita"
+    gender: "M"
+    gen: 2
+    parents: [ "Chit", "Ambi" ]
+
+  Chika:
+    name: "Chika"
+    gender: "F"
+    gen: 2
+    parents: [ "Vich", "Lika" ]
+
+  vila:
+    name: "Vila"
+    gender: "M"
+    gen: 2
+    parents: [ "Vich", "Lika" ]
+
+  jnki:
+    name: "Jnki"
+    gender: "F"
+    gen: 2
+    parents: [ "Vila" ]
+
+  chika:
+    name: "Chika"
+    gender: "F"
+    gen: 2
+    parents: [ "Vich", "Lika" ]
+
+  kpila:
+    name: "Kpila"
+    gender: "M"
+    gen: 2
+    parents: [ "Chika" ]
+
+  satvy:
+    name: "Satvy"
+    gender: "F"
+    gen: 2
+    parents: [ "Satya", "Vyan" ]
+
+  asva:
+    name: "Asva"
+    gender: "M"
+    gen: 2
+    parents: [ "Satvy" ]
+
+  savya:
+    name: "Savya"
+    gender: "M"
+    gen: 2
+    parents: [ "Satya", "Vyan" ]
+
+  krpi:
+    name: "Krpi"
+    gender: "F"
+    gen: 2
+    parents: [ "Savya" ]
+
+  saayan:
+    name: "Sayaan"
+    gender: "M"
+    gen: 2
+    parents: [ "Satya", "Vyan" ]
+
+  mina:
+    name: "Mina"
+    gender: "F"
+    gen: 2
+    parents: [ "Sayaan" ]
+
+  lavnya:
+    name: "Lavnya"
+    gender: "F"
+    gen: 3
+    parents: [ "Vila", "Jnki" ]
+
+  gru:
+    name: "Gru"
+    gender: "M"
+    gen: 3
+    parents: [ "Lavnya" ]
+
+  kriya:
+    name: "Kriya"
+    gender: "M"
+    gen: 3
+    parents: [ "Savya", "Krpi" ]
+
+  misa:
+    name: "Misa"
+    gender: "M"
+    gen: 3
+    parents: [ "Sayaan", "Mina" ]
