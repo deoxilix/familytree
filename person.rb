@@ -1,5 +1,3 @@
-# require "RoyalHouse"
-
 class Person
   attr_accessor :name, :gender, :generation, :parents, :children
 

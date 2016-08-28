@@ -1,5 +1,3 @@
-require './person'
-
 class RoyalHouse
   attr_accessor :royalFamily
 
@@ -7,7 +5,7 @@ class RoyalHouse
     self.royalFamily = []
   end
 
-  ## == These methods identify the "Person" with respective 'relation' with "person" concerned!
+  ## These methods identify the "Person" with respective 'relation' with "person" concerned!
 
   def findMother(person)
    mother = nil
@@ -77,7 +75,7 @@ class RoyalHouse
     else
       partner = self.royalFamily[self.royalFamily.index { |member| member.name == person.parents.first }]
     end
-    p partner.name unless partner.nil?
+    p partner.name unless partner == nil
   end
 end
 
