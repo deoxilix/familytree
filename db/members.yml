@@ -9,7 +9,7 @@ members:
     name: "Queen Anga"
     gender: "F"
     gen: 0
-    parents: []
+    parents: ["King Shan"]
 
   ish:
     name: "Ish"
@@ -71,12 +71,6 @@ members:
     gen: 2
     parents: [ "Chit", "Ambi" ]
 
-  Chika:
-    name: "Chika"
-    gender: "F"
-    gen: 2
-    parents: [ "Vich", "Lika" ]
-
   vila:
     name: "Vila"
     gender: "M"
@@ -136,6 +130,24 @@ members:
     gender: "F"
     gen: 2
     parents: [ "Sayaan" ]
+
+  jata:
+    name: "Jata"
+    gender: "M"
+    gen: 3
+    parents: [ "Drita", "Jaya" ]
+
+  driya:
+    name: "Driya"
+    gender: "F"
+    gen: 3
+    parents: [ "Drita", "Jaya" ]
+
+  mnu:
+    name: "Mnu"
+    gender: "M"
+    gen: 3
+    parents: [ "Driya" ]
 
   lavnya:
     name: "Lavnya"

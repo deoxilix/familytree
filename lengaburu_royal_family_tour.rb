@@ -1,37 +1,28 @@
 require './person'
-require './royal_house'
-require 'pry'
+require './house'
 require 'yaml'
+# require 'pry'
 
-@palace = RoyalHouse.new
+@palace = House.new
 
-## populates @palace.royalFamily with Person:objects
-
-path = './db/members.yml'
-yml = YAML::load(File.open(path))
-yml['members'].each { |member|
-  @palace.royalFamily << Person.new(member.last['name'], member.last['gender'], member.last['gen'], member.last['parents'])
-  @palace.royalFamily.last.objectifyParents(@palace)
-}
-
+## STDIN
 print "Enter name: "
-name = gets.strip.capitalize
+name = gets.strip.split(' ').map(&:capitalize).join(' ')
 print "Enter relation: "
 relation = gets.strip.downcase
 
+
+## populates House:family with Person:objects
 person = nil
-@palace.royalFamily.each do |member|
-  person = member if member.name == name                                        #= identifying Person:object corresponding to the input :name
-end
+path = './db/members.yml'
+yml = YAML::load(File.open(path))
+yml['members'].each { |member|
+  @palace.family << Person.new(member.last['name'], member.last['gender'], member.last['gen'], member.last['parents'])
+  @palace.family.last.addParents(@palace)
+  person = @palace.family.last if member.last['name'] == name                   #= identifying Person:object corresponding to the Input:name
+}
 
-## @palace.findRelatives
 
-@palace.findSiblings(person) if "siblings".include?(relation)
-@palace.findBrother(person) if "brothers".include?(relation)
-@palace.findSister(person) if "sisters".include?(relation)
-@palace.findCousins(person) if "cousins".include?(relation)
-@palace.findSons(person) if "sons".include?(relation)
-@palace.findDaughters(person) if "daughters".include?(relation)
-@palace.findMother(person) if "mothermomparents".include?(relation)
-@palace.findFather(person) if "fatherdadparents".include?(relation)
-@palace.findPartner(person) if "wifehusbandpartnermarriedto".include?(relation)
+## Person.findRelatives
+relatives = person.findRelatives(relation, @palace)
+relatives.empty? ? @palace.defaulter(person, relation) : relatives.each{ |relative| puts relative.name }
